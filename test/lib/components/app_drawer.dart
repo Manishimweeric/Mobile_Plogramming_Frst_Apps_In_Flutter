@@ -11,7 +11,7 @@ class AppDrawer extends StatelessWidget {
         children: <Widget>[
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.yellow,
+              color: Color.fromARGB(255, 23, 21, 104),
             ),
             accountName: Text(
               'Eric Kabosi',

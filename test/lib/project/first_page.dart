@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test/components/app_drawer.dart';
+
 class FirstPage extends StatelessWidget {
- FirstPage({Key? key}) : super(key: key);
+  final VoidCallback toggleTheme;
+
+  FirstPage({Key? key, required this.toggleTheme}) : super(key: key);
 
   void navigateToLogin(BuildContext context) {
     Navigator.pushNamed(context, '/login');
@@ -23,6 +26,12 @@ class FirstPage extends StatelessWidget {
             );
           },
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.brightness_6),
+            onPressed: toggleTheme,
+          ),
+        ],
       ),
       drawer: AppDrawer(),  // Call the global drawer here
       body: SafeArea(
